@@ -4,33 +4,82 @@
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   var PRODUCTOS = [
-    { id: 'vaso6', nombre: 'Vaso de cartón 6 oz', pres: 'Paquete x 50 und', precio: '$4.500', linea: 'Cafetería', img: 'vaso-carton' },
-    { id: 'toallaElite', nombre: 'Toalla de manos natural Elite', pres: 'Rollo x 100 m', precio: '$19.700', linea: 'Aseo', img: 'toalla-rollo' },
-    { id: 'jumbo', nombre: 'Papel higiénico jumbo HD Elite', pres: 'Rollo x 250 m', precio: '$11.300', linea: 'Aseo', img: 'papel-jumbo' },
-    { id: 'vaso7', nombre: 'Vaso transparente 7 oz', pres: 'Paquete x 50 und', precio: '$2.800', linea: 'Cafetería', img: 'vaso-transparente' },
-    { id: 'servilleta', nombre: 'Servilleta Favorita', pres: 'Paquete x 320 und', precio: '$3.200', linea: 'Cafetería', img: 'servilletas' },
-    { id: 'esponja', nombre: 'Esponja multiusos plateada', pres: 'Unidad', precio: '$2.900', linea: 'Aseo', img: 'esponja' },
-    { id: 'selloRojo', nombre: 'Café Sello Rojo', pres: 'Bolsa x 500 g', precio: '$27.700', linea: 'Cafetería', img: 'cafe' },
-    { id: 'aguila', nombre: 'Café Águila Roja', pres: 'Bolsa x 500 g', precio: '$27.200', linea: 'Cafetería', img: 'cafe' },
-    { id: 'tapabocas', nombre: 'Tapabocas desechable blanco', pres: 'Caja x 50 und', precio: '$12.000', linea: 'Aseo', img: 'tapabocas' },
-    { id: 'nitrilo', nombre: 'Guante de nitrilo azul', pres: 'Caja x 100 und', precio: '$36.000', linea: 'Aseo', img: 'guantes-nitrilo' },
-    { id: 'bolsa4055', nombre: 'Bolsa negra 40 x 55', pres: 'Paquete x 10 und', precio: '$1.800', linea: 'Aseo', img: 'bolsa-basura' },
-    { id: 'wypall', nombre: 'Paños WYPALL X-70 blanco', pres: 'Rollo x 88 paños', precio: '$38.500', linea: 'Aseo', img: 'panos-rollo' },
-    { id: 'sharpieInd', nombre: 'Marcador industrial Sharpie', pres: 'Unidad', precio: '$2.000', linea: 'Papelería', img: 'marcador' },
-    { id: 'faber', nombre: 'Marcador permanente Faber', pres: 'Unidad', precio: '$1.500', linea: 'Papelería', img: 'marcador' },
-    { id: 'resmaRepro', nombre: 'Resma carta 75 g Reprograf', pres: 'Resma x 500 hojas', precio: '$16.700', linea: 'Papelería', img: 'resma' },
-    { id: 'resmaEco', nombre: 'Resma carta 75 g ecológica', pres: 'Resma x 500 hojas', precio: '$18.900', linea: 'Papelería', img: 'resma' },
-    { id: 'bic', nombre: 'Esfero BIC cristal negro', pres: 'Unidad', precio: '$700', linea: 'Papelería', img: 'esfero' },
-    { id: 'resaltador', nombre: 'Resaltador', pres: 'Unidad, varios colores', precio: '$1.500', linea: 'Papelería', img: 'resaltador' },
-    { id: 'az', nombre: 'Legajador AZ azul plastificado', pres: 'Carta u oficio', precio: '$5.200', linea: 'Papelería', img: 'legajador' },
-    { id: 'folder', nombre: 'Folder colgante azul Norma', pres: 'Unidad', precio: '$900', linea: 'Papelería', img: 'folder' },
-    { id: 'malla', nombre: 'Guante de malla cárnico corto', pres: 'Talla M', precio: '$540.000', linea: 'Otros', img: 'guante-malla' },
-    { id: 'cuchillo', nombre: 'Cuchillo carnicero N.º 12 Tres Claveles', pres: 'Unidad', precio: '$236.000', linea: 'Otros', img: 'cuchillo' },
-    { id: 'gancho', nombre: 'Gancho cárnico de desposte', pres: '15 cm', precio: '$64.000', linea: 'Otros', img: 'gancho' },
-    { id: 'aceite', nombre: 'Aceite para guadaña 2 tiempos Shindaiwa', pres: 'Envase x 1/4', precio: '$438.000', linea: 'Otros', img: 'aceite' },
-    { id: 'hidro', nombre: 'Hidrolavadora 1560 PSI', pres: '7 L/min · 1500 W', precio: '$304.200', linea: 'Otros', img: 'hidrolavadora' },
-    { id: 'zuncho', nombre: 'Zuncho en rollo', pres: 'Rollo x 1000 m', precio: '$51.500', linea: 'Otros', img: 'zuncho' },
-    { id: 'bisturi', nombre: 'Repuesto de bisturí grande', pres: 'Estuche x 10 und', precio: '$26.100', linea: 'Otros', img: 'bisturi' }
+    {"id": "cafe-aguila", "nombre": "Café Águila Roja x 500 g", "pres": "Café molido tradicional, rinde para toda la jornada.", "precio": "$28.500", "iva": 5, "linea": "Cafetería", "img": "cafe-aguila"},
+    {"id": "instacrem", "nombre": "Instacrem x 100 sobres", "pres": "Crema no láctea en sobres individuales para café.", "precio": "$17.850", "iva": 19, "linea": "Cafetería", "img": "instacrem"},
+    {"id": "azucar-sobres", "nombre": "Azúcar en sobres x 200", "pres": "Sobres stick de 5 g, prácticos e higiénicos.", "precio": "$7.150", "iva": 5, "linea": "Cafetería", "img": "azucar-sobres"},
+    {"id": "aromatica-jaibel-100", "nombre": "Aromática Jaibel surtida x 100", "pres": "Sabores frutales surtidos en bolsita individual.", "precio": "$44.000", "iva": 19, "linea": "Cafetería", "img": "aromatica-jaibel-100"},
+    {"id": "aromatica-panela", "nombre": "Aromática Doña Panelita x 50", "pres": "Aromática de panela surtida Jaibel.", "precio": "$11.900", "iva": 5, "linea": "Cafetería", "img": "aromatica-panela"},
+    {"id": "aromatica-teresita", "nombre": "Aromática Teresita canela x 20", "pres": "Infusión de canela en caja de 20 bolsitas.", "precio": "$9.550", "iva": 19, "linea": "Cafetería", "img": "aromatica-teresita"},
+    {"id": "te-hindu", "nombre": "Té Hindú original x 100", "pres": "Té negro clásico en bolsitas.", "precio": "$32.550", "iva": 19, "linea": "Cafetería", "img": "te-hindu"},
+    {"id": "mezcladores", "nombre": "Mezcladores de madera x 500", "pres": "Palitos de madera para revolver bebidas.", "precio": "$4.000", "iva": 19, "linea": "Cafetería", "img": "mezcladores"},
+    {"id": "vaso-7oz", "nombre": "Vaso de cartón 7 oz x 50", "pres": "Vaso blanco para bebidas calientes.", "precio": "$5.150", "iva": 19, "linea": "Cafetería", "img": "vaso-7oz"},
+    {"id": "vaso-6oz", "nombre": "Vaso de cartón 6 oz x 50", "pres": "Ideal para tinto y aromática.", "precio": "$4.650", "iva": 19, "linea": "Cafetería", "img": "vaso-6oz"},
+    {"id": "plato-icopor", "nombre": "Plato de icopor 15,5 x 20", "pres": "Plato desechable resistente para refrigerios.", "precio": "$3.450", "iva": 19, "linea": "Cafetería", "img": "plato-icopor"},
+    {"id": "servilleta-elite", "nombre": "Servilleta Elite cóctel x 200", "pres": "Servilleta blanca para cafetería.", "precio": "$6.500", "iva": 19, "linea": "Cafetería", "img": "servilleta-elite"},
+    {"id": "servilleta-favorita", "nombre": "Servilleta Favorita partida x 320", "pres": "Paquete económico de alto rendimiento.", "precio": "$4.300", "iva": 19, "linea": "Cafetería", "img": "servilleta-favorita"},
+    {"id": "hipoclorito", "nombre": "Blanqueador Blanquitex Berhlan x 3800 ml", "pres": "Blanquea y desinfecta pisos, baños y cocinas.", "precio": "$9.900", "iva": 19, "linea": "Aseo", "img": "hipoclorito"},
+    {"id": "blanqueador-sc", "nombre": "Blanqueador sin cloro Full Fresh", "pres": "Blanquea y desinfecta sin olor a cloro.", "precio": "$20.150", "iva": 19, "linea": "Aseo", "img": "blanqueador-sc"},
+    {"id": "desinfectante-fuller", "nombre": "Limpiador desinfectante Full Fresh x 3785 ml", "pres": "Aromas surtidos: cereza, citrus y más.", "precio": "$13.850", "iva": 19, "linea": "Aseo", "img": "desinfectante-fuller"},
+    {"id": "fabuloso", "nombre": "Fabuloso x 5000 ml", "pres": "Limpiador multiusos con aroma duradero.", "precio": "$38.100", "iva": 19, "linea": "Aseo", "img": "fabuloso"},
+    {"id": "jabon-manos", "nombre": "Jabón líquido para manos Full Fresh x 3785 ml", "pres": "Garrafa para recargar dispensadores.", "precio": "$21.800", "iva": 19, "linea": "Aseo", "img": "jabon-manos"},
+    {"id": "jabon-multiusos", "nombre": "Jabón multiusos Full Fresh x 3785 ml", "pres": "Limpieza general de pisos y superficies.", "precio": "$27.700", "iva": 19, "linea": "Aseo", "img": "jabon-multiusos"},
+    {"id": "lavaloza", "nombre": "Lavaloza líquido Full Fresh x 2000 ml", "pres": "Aroma limón, corta la grasa.", "precio": "$17.800", "iva": 19, "linea": "Aseo", "img": "lavaloza"},
+    {"id": "desengrasante", "nombre": "Desengrasante multisuperficies Full Fresh", "pres": "Remueve grasa en cocinas y equipos.", "precio": "$33.100", "iva": 19, "linea": "Aseo", "img": "desengrasante"},
+    {"id": "shampoo-alfombra", "nombre": "Shampoo alfombras y tapizados Full Fresh", "pres": "Limpia alfombras y tapetes sin dañar la fibra.", "precio": "$28.450", "iva": 19, "linea": "Aseo", "img": "shampoo-alfombra"},
+    {"id": "alcohol", "nombre": "Alcohol antiséptico x 3700 ml", "pres": "Desinfección de manos y superficies.", "precio": "$42.900", "iva": 5, "linea": "Aseo", "img": "alcohol"},
+    {"id": "glade-aceite", "nombre": "Ambientador Glade en aceite x 3", "pres": "Repuestos de aceite, aromas surtidos.", "precio": "$32.550", "iva": 19, "linea": "Aseo", "img": "glade-aceite"},
+    {"id": "pato-tanque", "nombre": "Pato tanque discos activos", "pres": "Limpia y perfuma el sanitario con cada descarga.", "precio": "$13.750", "iva": 19, "linea": "Aseo", "img": "pato-tanque"},
+    {"id": "jumbo-scott", "nombre": "Papel higiénico jumbo Scott x 250 m", "pres": "Rollo institucional doble hoja.", "precio": "$19.100", "iva": 19, "linea": "Aseo", "img": "jumbo-scott"},
+    {"id": "jumbo-nube", "nombre": "Papel higiénico jumbo Nube x 250 m", "pres": "Opción económica doble hoja.", "precio": "$11.050", "iva": 19, "linea": "Aseo", "img": "jumbo-nube"},
+    {"id": "suplex", "nombre": "Papel higiénico Suplex (rollo)", "pres": "Precio por rollo. Doble hoja.", "precio": "$3.000", "iva": 19, "linea": "Aseo", "img": "suplex"},
+    {"id": "toalla-manos", "nombre": "Toalla de manos Scott natural x 28", "pres": "Toalla en Z para dispensador.", "precio": "$7.700", "iva": 19, "linea": "Aseo", "img": "toalla-manos"},
+    {"id": "faciales", "nombre": "Pañuelos faciales Familia (caja)", "pres": "Caja de pañuelos suaves.", "precio": "$4.400", "iva": 19, "linea": "Aseo", "img": "faciales"},
+    {"id": "panos-humedos", "nombre": "Paños húmedos Huggies x 80", "pres": "Limpieza práctica e higiénica de manos.", "precio": "$12.400", "iva": 19, "linea": "Aseo", "img": "panos-humedos"},
+    {"id": "bolsa-negra-70x90", "nombre": "Bolsa negra 70 x 90 x 10", "pres": "Bolsa grande calibre resistente.", "precio": "$4.350", "iva": 19, "linea": "Aseo", "img": "bolsa-negra-70x90"},
+    {"id": "bolsa-verde", "nombre": "Bolsa verde 70 x 90 x 6", "pres": "Para residuos orgánicos según código de colores.", "precio": "$3.800", "iva": 19, "linea": "Aseo", "img": "bolsa-verde"},
+    {"id": "bolsa-blanca", "nombre": "Bolsa blanca 100 x 120 x 5", "pres": "Extra grande para canecas de 55 galones.", "precio": "$9.400", "iva": 19, "linea": "Aseo", "img": "bolsa-blanca"},
+    {"id": "bolsa-negra-40x55", "nombre": "Bolsa negra papelera x 10", "pres": "Tamaño papelera para oficina y baño.", "precio": "$1.900", "iva": 19, "linea": "Aseo", "img": "bolsa-negra-40x55"},
+    {"id": "bolsa-hermetica", "nombre": "Bolsa con cierre hermético (unidad)", "pres": "Precio por bolsa. Para alimentos y documentos.", "precio": "$130", "iva": 19, "linea": "Aseo", "img": "bolsa-hermetica"},
+    {"id": "escoba-suave", "nombre": "Escoba suave Fuller", "pres": "Barre polvo fino en pisos lisos.", "precio": "$10.200", "iva": 19, "linea": "Aseo", "img": "escoba-suave"},
+    {"id": "escoba-dura", "nombre": "Escoba dura Fuller", "pres": "Ideal para patios y zonas exteriores.", "precio": "$9.450", "iva": 19, "linea": "Aseo", "img": "escoba-dura"},
+    {"id": "escoba-plana", "nombre": "Escoba plana 38 cm Trapisol", "pres": "Base ancha para áreas amplias.", "precio": "$7.450", "iva": 19, "linea": "Aseo", "img": "escoba-plana"},
+    {"id": "trapeador", "nombre": "Trapeador 1200 g Trapisol", "pres": "Mecha de algodón con acople, sin palo.", "precio": "$10.900", "iva": 19, "linea": "Aseo", "img": "trapeador"},
+    {"id": "palo", "nombre": "Palo de escoba 1,40 m", "pres": "Colores surtidos, rosca universal.", "precio": "$6.650", "iva": 19, "linea": "Aseo", "img": "palo"},
+    {"id": "recogedor", "nombre": "Recogedor plástico con banda", "pres": "Borde de caucho que no deja residuos.", "precio": "$4.700", "iva": 19, "linea": "Aseo", "img": "recogedor"},
+    {"id": "mopa", "nombre": "Brillador mopa 82 cm Fuller", "pres": "Para brillar y recoger polvo en grandes áreas.", "precio": "$72.200", "iva": 19, "linea": "Aseo", "img": "mopa"},
+    {"id": "limpion", "nombre": "Limpión microfibra 40 x 40 x 5", "pres": "Absorbe y no deja pelusa.", "precio": "$23.750", "iva": 19, "linea": "Aseo", "img": "limpion"},
+    {"id": "esponja", "nombre": "Esponja Iris doble uso", "pres": "Colores surtidos, cara abrasiva.", "precio": "$3.300", "iva": 19, "linea": "Aseo", "img": "esponja"},
+    {"id": "bayetilla", "nombre": "Bayetilla blanca x metro", "pres": "Tela absorbente para limpieza.", "precio": "$8.200", "iva": 19, "linea": "Aseo", "img": "bayetilla"},
+    {"id": "papelera", "nombre": "Papelera vaivén 10 L", "pres": "Tapa vaivén para baños y oficinas.", "precio": "$18.150", "iva": 19, "linea": "Aseo", "img": "papelera"},
+    {"id": "atomizador", "nombre": "Atomizador con pistola", "pres": "Para diluir y aplicar productos.", "precio": "$2.600", "iva": 19, "linea": "Aseo", "img": "atomizador"},
+    {"id": "guante-nitrilo-azul", "nombre": "Guante de nitrilo azul x 100", "pres": "Caja x 100, tallas S, M y L.", "precio": "$37.800", "iva": 19, "linea": "Aseo", "img": "guante-nitrilo-azul"},
+    {"id": "guante-nitrilo-negro", "nombre": "Guante de nitrilo negro x 100", "pres": "Mayor resistencia, talla M.", "precio": "$31.400", "iva": 19, "linea": "Aseo", "img": "guante-nitrilo-negro"},
+    {"id": "guante-eterna", "nombre": "Guante Eterna calibre 25", "pres": "Guante de caucho para aseo, tallas 8 y 9.", "precio": "$5.350", "iva": 19, "linea": "Aseo", "img": "guante-eterna"},
+    {"id": "tapabocas", "nombre": "Tapabocas desechable x 50", "pres": "Triple capa, uso desechable.", "precio": "$12.600", "iva": 19, "linea": "Aseo", "img": "tapabocas"},
+    {"id": "resma", "nombre": "Resma carta 75 g Cartoprint", "pres": "500 hojas blancas para impresión.", "precio": "$17.650", "iva": 19, "linea": "Papelería", "img": "resma"},
+    {"id": "postit", "nombre": "Notas adhesivas neón 654", "pres": "Notas adhesivas de colores.", "precio": "$3.100", "iva": 19, "linea": "Papelería", "img": "postit"},
+    {"id": "cinta-pegante", "nombre": "Cinta pegante transparente 12 mm x 40 m", "pres": "Transparente, uso general.", "precio": "$1.250", "iva": 19, "linea": "Papelería", "img": "cinta-pegante"},
+    {"id": "cinta-enmascarar", "nombre": "Cinta de enmascarar 18 mm", "pres": "Para marcar, rotular y sellar.", "precio": "$3.700", "iva": 19, "linea": "Papelería", "img": "cinta-enmascarar"},
+    {"id": "esfero-gel", "nombre": "Esfero gel negro Norma (unidad)", "pres": "Precio por unidad. Escritura suave.", "precio": "$550", "iva": 19, "linea": "Papelería", "img": "esfero-gel"},
+    {"id": "cosedora", "nombre": "Cosedora Tritón 20 hojas", "pres": "Metálica, de escritorio.", "precio": "$13.450", "iva": 19, "linea": "Papelería", "img": "cosedora"},
+    {"id": "archivador", "nombre": "Archivador fuelle carta", "pres": "Polipropileno de 13 bolsillos.", "precio": "$13.650", "iva": 19, "linea": "Papelería", "img": "archivador"},
+    {"id": "zuncho", "nombre": "Zuncho rollo x 3000 m", "pres": "Para embalaje y despachos.", "precio": "$54.100", "iva": 19, "linea": "Papelería", "img": "zuncho"},
+    {"id": "malla", "nombre": "Guante de malla cárnico corto", "pres": "Talla M", "precio": "$540.000", "iva": 19, "linea": "Otros", "img": "malla"},
+    {"id": "cuchillo", "nombre": "Cuchillo carnicero N.º 12 Tres Claveles", "pres": "Unidad", "precio": "$236.000", "iva": 19, "linea": "Otros", "img": "cuchillo"},
+    {"id": "gancho", "nombre": "Gancho cárnico de desposte", "pres": "15 cm", "precio": "$64.000", "iva": 19, "linea": "Otros", "img": "gancho"},
+    {"id": "aceite", "nombre": "Aceite para guadaña 2 tiempos Shindaiwa", "pres": "Envase x 1/4", "precio": "$438.000", "iva": 19, "linea": "Otros", "img": "aceite"},
+    {"id": "hidro", "nombre": "Hidrolavadora 1560 PSI", "pres": "7 L/min · 1500 W", "precio": "$304.200", "iva": 19, "linea": "Otros", "img": "hidro"},
+    {"id": "bisturi", "nombre": "Repuesto de bisturí grande", "pres": "Estuche x 10 und", "precio": "$26.100", "iva": 19, "linea": "Otros", "img": "bisturi"},
+    {"id": "selloRojo", "nombre": "Café Sello Rojo", "pres": "Bolsa x 500 g", "precio": "$27.700", "iva": 19, "linea": "Cafetería", "img": "selloRojo"},
+    {"id": "vasoTrans", "nombre": "Vaso transparente 7 oz", "pres": "Paquete x 50 und", "precio": "$2.800", "iva": 19, "linea": "Cafetería", "img": "vasoTrans"},
+    {"id": "toallaElite", "nombre": "Toalla de manos natural Elite", "pres": "Rollo x 100 m", "precio": "$19.700", "iva": 19, "linea": "Aseo", "img": "toallaElite"},
+    {"id": "wypall", "nombre": "Paños WYPALL X-70 blanco", "pres": "Rollo x 88 paños", "precio": "$38.500", "iva": 19, "linea": "Aseo", "img": "wypall"},
+    {"id": "sharpieInd", "nombre": "Marcador industrial Sharpie", "pres": "Unidad", "precio": "$2.000", "iva": 19, "linea": "Papelería", "img": "sharpieInd"},
+    {"id": "faber", "nombre": "Marcador permanente Faber", "pres": "Unidad", "precio": "$1.500", "iva": 19, "linea": "Papelería", "img": "faber"},
+    {"id": "bic", "nombre": "Esfero BIC cristal negro", "pres": "Unidad", "precio": "$700", "iva": 19, "linea": "Papelería", "img": "bic"},
+    {"id": "resaltador", "nombre": "Resaltador", "pres": "Unidad, varios colores", "precio": "$1.500", "iva": 19, "linea": "Papelería", "img": "resaltador"},
+    {"id": "az", "nombre": "Legajador AZ azul plastificado", "pres": "Carta u oficio", "precio": "$5.200", "iva": 19, "linea": "Papelería", "img": "az"},
+    {"id": "folder", "nombre": "Folder colgante azul Norma", "pres": "Unidad", "precio": "$900", "iva": 19, "linea": "Papelería", "img": "folder"}
   ];
   var LINEAS = ['Todos', 'Aseo', 'Cafetería', 'Papelería', 'Otros'];
   var FAQ = [
@@ -90,9 +139,9 @@
     $('grid').innerHTML = lista.map(function (p, i) {
       var delay = stagger ? Math.min(i, 10) * 30 : 0; // 30 ms entre tarjetas, tope corto
       return '<article class="card" data-card="' + p.id + '" style="animation-delay:' + delay + 'ms' + (stagger ? '' : ';animation:none') + '">' +
-        '<div class="card-img"><img src="img/' + p.img + '.svg" alt="' + esc(p.nombre) + '" loading="lazy" width="200" height="150"><span class="line">' + p.linea + '</span></div>' +
+        '<div class="card-img"><img src="img/p/' + p.img + '.jpg" alt="' + esc(p.nombre) + '" loading="lazy" width="200" height="150"><span class="line">' + p.linea + '</span></div>' +
         '<div class="card-body"><h3>' + esc(p.nombre) + '</h3><span class="pres">' + esc(p.pres) + '</span>' +
-        '<div class="card-foot"><span class="price num">' + p.precio + '<small>+ IVA</small></span><span data-ctl="' + p.id + '">' + control(p, false) + '</span></div></div></article>';
+        '<div class="card-foot"><span class="price num">' + p.precio + '<small>+ IVA ' + p.iva + '%</small></span><span data-ctl="' + p.id + '">' + control(p, false) + '</span></div></div></article>';
     }).join('');
   }
   function refreshControls(id) {
@@ -108,7 +157,7 @@
     $('listBox').hidden = n === 0;
     $('listBox').innerHTML = ids.map(function (id) {
       var p = byId[id];
-      return '<div class="list-row"><div class="thumb"><img src="img/' + p.img + '.svg" alt=""></div><div class="name">' + esc(p.nombre) + '<span>' + esc(p.pres) + ' · ' + p.precio + ' + IVA</span></div>' + control(p, true) + '</div>';
+      return '<div class="list-row"><div class="thumb"><img src="img/p/' + p.img + '.jpg" alt=""></div><div class="name">' + esc(p.nombre) + '<span>' + esc(p.pres) + ' · ' + p.precio + ' + IVA ' + p.iva + '%</span></div>' + control(p, true) + '</div>';
     }).join('');
     $('drawerCount').textContent = n ? '· ' + (n === 1 ? '1 producto' : n + ' productos') : '';
     var badge = $('badge'), prev = badge.textContent;
