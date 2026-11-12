@@ -70,7 +70,7 @@
     {"id": "aceite", "nombre": "Aceite para guadaña 2 tiempos Shindaiwa", "pres": "Envase x 1/4", "precio": "$438.000", "iva": 19, "linea": "Otros", "img": "aceite"},
     {"id": "hidro", "nombre": "Hidrolavadora 1560 PSI", "pres": "7 L/min · 1500 W", "precio": "$304.200", "iva": 19, "linea": "Otros", "img": "hidro"},
     {"id": "bisturi", "nombre": "Repuesto de bisturí grande", "pres": "Estuche x 10 und", "precio": "$26.100", "iva": 19, "linea": "Otros", "img": "bisturi"},
-    {"id": "selloRojo", "nombre": "Café Sello Rojo", "pres": "Bolsa x 500 g", "precio": "$27.700", "iva": 19, "linea": "Cafetería", "img": "selloRojo"},
+    {"id": "selloRojo", "nombre": "Café Sello Rojo", "pres": "Bolsa x 500 g", "precio": "$27.700", "iva": 5, "linea": "Cafetería", "img": "selloRojo"},
     {"id": "vasoTrans", "nombre": "Vaso transparente 7 oz", "pres": "Paquete x 50 und", "precio": "$2.800", "iva": 19, "linea": "Cafetería", "img": "vasoTrans"},
     {"id": "toallaElite", "nombre": "Toalla de manos natural Elite", "pres": "Rollo x 100 m", "precio": "$19.700", "iva": 19, "linea": "Aseo", "img": "toallaElite"},
     {"id": "wypall", "nombre": "Paños WYPALL X-70 blanco", "pres": "Rollo x 88 paños", "precio": "$38.500", "iva": 19, "linea": "Aseo", "img": "wypall"},
